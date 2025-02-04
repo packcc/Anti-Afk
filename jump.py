@@ -11,9 +11,9 @@ jumping = False
 def StartJumping():
     global jumping, jumped, jump_duration
     try:
-        jump_duration = float(duration_entry.get()) if duration_entry.get() else 3.0  # Default to 3 seconds if empty or invalid
+        jump_duration = float(duration_entry.get()) if duration_entry.get() else 120.0  # Default to 120 seconds if empty or invalid
         while jumping:
-            wow_windows = gw.getWindowsWithTitle('World of Warcraft')
+            wow_windows = gw.getWindowsWithTitle('World of Warcraft') # Change this if you want to use in another game
             if wow_windows:
                 win = wow_windows[0]
                 win.activate()
